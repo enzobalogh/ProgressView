@@ -1,0 +1,42 @@
+Escreva um componente customizado da interface gráfica com o usuário que represente
+visualmente o progresso de uma atividade (ProgressView). Teste seu componente em
+uma aplicação para celular utilizando a linguagem Java do Software Development Kit
+(SDK) da plataforma Android.
+
+REQUISITOS:
+1. O componente a ser desenvolvido deve:
+ Ser uma View customizada (subclasse da classe View)
+ Desenhar elementos gráficos manualmente usando Canvas
+ Ser reutilizável (como uma biblioteca interna)
+2. A sua view deve desenhar:
+ Um círculo de progresso (tipo gráfico radial)
+ Um texto central mostrando a porcentagem
+ Um título (ex: “Progresso semanal”)
+3. Atualização da View
+ A sua View dever possuir o método público setProgress(int value) // 0 a 100
+ Toda vez que este método for chamada, a view deve ser redesenhada.
+ Ao atualizar o progresso, deve haver uma animação suave
+4. Interação do usuário
+ Ao clicar na view, deve-se alternar entre dois modos:
+
+ modo percentual (%)
+ modo absoluto (ex: 7/10 tarefas)
+
+5. Customização via XML
+ Permitir atributos customizados, por exemplo:
+app:progressColor="#4CAF50"
+app:textColor="#000000"
+app:maxValue="10"
+Todos os textos desenhados no seu componente devem ser atributos customizados para
+permitir a internacionalização.
+Os atributos devem ser definidos no arquivo attrs.xml e lidos via TypedArray
+6. Reutilização
+O componente deve ser utilizável em qualquer layout, por exemplo:
+<com.example.ProgressView
+android:layout_width="200dp"
+android:layout_height="200dp"
+app:progress="70"/>
+CASO DE USO:
+Crie uma atividade na sua aplicação que utilize uma instância do componente
+customizado ProgressView e realize uma tarefa que possa ter seu progresso visualizado
+pelo componente.
